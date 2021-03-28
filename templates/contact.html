@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Contact us{% endblock title %}
+
+
+{% block body %} 
+
+<div class="container my-4"> 
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/1600x600/?sky,water" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/1600x600/?laptop,water" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/1600x600/?building,water" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="container mb-4 py-4 ">
+
+  <h1 class="text-center">CONTACT US</h2>
+
+<form method="post" action="/contact">
+{% csrf_token %}
+  <div class="form-group">
+    <label for="name">Enter you name here</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="JOHN WALKER">
+  </div>
+ 
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+  </div>
+
+
+  <div class="form-group">
+    <label for="phone">Phone number.</label>
+    <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your number.">
+  </div>
+
+
+  <div class="form-group">
+    <label for="desc">Tell me your purpose.</label>
+    <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+  </div>
+<button class="btn btn-primary" type="submit">Submit</button>
+
+</form>
+</div>
+</div>
+
+
+
+
+
+
+{% endblock body %} 
